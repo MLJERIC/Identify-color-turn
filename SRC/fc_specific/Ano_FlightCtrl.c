@@ -562,6 +562,7 @@ void Flight_Mode_Set(u8 dT_ms)
 	
 	
 	
+	
 	if(flight_mode_old != flag.flight_mode) //摇杆对应模式状态改变
 	{
 		flight_mode_old = flag.flight_mode;
@@ -585,6 +586,24 @@ void Flight_Mode_Set(u8 dT_ms)
 		{
 			flag.flight_mode2 = 2;
 		}
+		
+		if (CH_N[AUX3]<0)
+		{
+		
+		}
+		else 
+		{
+		one_key_take_off();
+		}
+		if (CH_N[AUX4]<0)
+		{
+		
+		}
+		else 
+		{
+		one_key_land();
+		}
+		
 	}
 	else
 	{

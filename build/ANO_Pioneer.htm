@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\ANO_Pioneer.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\ANO_Pioneer.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri May 21 19:02:22 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri May 21 19:52:29 2021
 <BR><P>
 <H3>Maximum Stack Usage =        188 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1252,10 +1252,12 @@ Global Symbols
 
 <P><STRONG><a name="[aa]"></a>one_key_take_off</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, ano_flightctrl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlyCtrl_Task
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flight_Mode_Set
 </UL>
 
 <P><STRONG><a name="[ab]"></a>one_key_land</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ano_flightctrl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlyCtrl_Task
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flight_Mode_Set
 </UL>
 
 <P><STRONG><a name="[120]"></a>land_discriminat</STRONG> (Thumb, 172 bytes, Stack size 0 bytes, ano_flightctrl.o(.text))
@@ -1278,10 +1280,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop_1000Hz
 </UL>
 
-<P><STRONG><a name="[94]"></a>Flight_Mode_Set</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, ano_flightctrl.o(.text))
+<P><STRONG><a name="[94]"></a>Flight_Mode_Set</STRONG> (Thumb, 188 bytes, Stack size 8 bytes, ano_flightctrl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Flight_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Speed_Mode_Switch
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;one_key_take_off
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;one_key_land
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Speed_Mode_Switch
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Loop_100Hz
 </UL>
