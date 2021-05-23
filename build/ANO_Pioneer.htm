@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\build\ANO_Pioneer.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\ANO_Pioneer.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 23 20:13:33 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 23 21:13:28 2021
 <BR><P>
-<H3>Maximum Stack Usage =        240 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        248 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 Loop_20Hz &rArr; __hardfp_asin &rArr; __kernel_poly &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -342,7 +342,6 @@ Global Symbols
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
-<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetSoftwareStartConvStatus
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_VBATCmd
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_TempSensorVrefintCmd
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_AnalogWatchdogSingleChannelConfig
@@ -586,6 +585,7 @@ Global Symbols
 <LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DiscModeChannelCountConfig
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ContinuousModeCmd
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_EOCOnEachRegularChannelCmd
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetSoftwareStartConvStatus
 </UL>
 
 <P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text))
@@ -679,7 +679,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmi088_gyr_enable
 </UL>
 
-<P><STRONG><a name="[ca]"></a>ANO_DT_Init</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, ano_dt.o(.text))
+<P><STRONG><a name="[ca]"></a>ANO_DT_Init</STRONG> (Thumb, 136 bytes, Stack size 0 bytes, ano_dt.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;All_Init
 </UL>
 
@@ -4736,8 +4736,8 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ano_scheduler.o(.data)
 </UL>
-<P><STRONG><a name="[6]"></a>Loop_20Hz</STRONG> (Thumb, 270 bytes, Stack size 40 bytes, ano_scheduler.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = Loop_20Hz &rArr; __hardfp_asin &rArr; __kernel_poly &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[6]"></a>Loop_20Hz</STRONG> (Thumb, 308 bytes, Stack size 48 bytes, ano_scheduler.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = Loop_20Hz &rArr; __hardfp_asin &rArr; __kernel_poly &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
@@ -4810,7 +4810,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AnoDTDataAnl
 </UL>
 
-<P><STRONG><a name="[db]"></a>AnoDTDataAnl</STRONG> (Thumb, 528 bytes, Stack size 32 bytes, ano_dt.o(.text))
+<P><STRONG><a name="[db]"></a>AnoDTDataAnl</STRONG> (Thumb, 526 bytes, Stack size 32 bytes, ano_dt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = AnoDTDataAnl &rArr; Parame_Reset &rArr; AnoDTSendStr &rArr; OtherSendDataAdd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_save
