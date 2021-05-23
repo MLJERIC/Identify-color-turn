@@ -39,6 +39,7 @@
 #include "Drv_BSP.h"
 #include "math.h"
 #include "Ano_FcData.h"
+#include "Ano_ProgramCtrl_User.h"
 
 u32 test_dT_1000hz[3],test_rT[6];
 
@@ -170,20 +171,23 @@ static void Loop_20Hz(void)	//50ms执行一次
 	//openmv寻物转头
     if(opmv.offline==0)
 	{	
-		s16 pox_x_opmv;		
-		pox_x_opmv=(opmv.cb.pos_x/(160*120))*25.4*0.1f;
-	if(opmv.cb.pos_x>=0){
-		//设与物体距离为20cm（可识别最远距离），x单位像素转厘米
-		flag.pos_x_pidp=-((asin(opmv.cb.pos_x/20))*10);		
-		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);	//速度暂定10度每秒
-	}
-	else if(opmv.cb.pos_x<0){
-		flag.pos_x_pidp=(asin((-opmv.cb.pos_x)/20))*10;
-		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);
-	}
+//		s16 pox_x_opmv;		
+//		pox_x_opmv=(opmv.cb.pos_x/(160*120))*25.4*0.1f;
+//	if(opmv.cb.pos_x>=0){
+//		//设与物体距离为20cm（可识别最远距离），x单位像素转厘米
+//		flag.pos_x_pidp=-((asin(opmv.cb.pos_x/20))*10);		
+//		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);	//速度暂定10度每秒
+//	}
+//	else if(opmv.cb.pos_x<0){
+//		flag.pos_x_pidp=(asin((-opmv.cb.pos_x)/20))*10;
+//		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);
+//	}
+		Program_Ctrl_User_Set_YAWdps(-2*opmv.cb.pos_x);
     }
-	else flag.pos_x_pidp=0;
-		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);
+		
+	else 		Program_Ctrl_User_Set_YAWdps(0);
+	
+	
 }
 
 static void Loop_2Hz(void)	//500ms执行一次

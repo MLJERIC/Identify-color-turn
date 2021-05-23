@@ -67,3 +67,4 @@
 .\build\ano_scheduler.o: SRC\applications\Ano_OF_DecoFusion.h
 .\build\ano_scheduler.o: .\SRC\AnoImu\Ano_Imu_Task.h
 .\build\ano_scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\build\ano_scheduler.o: SRC\applications\Ano_ProgramCtrl_User.h
