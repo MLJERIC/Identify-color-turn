@@ -577,14 +577,19 @@ void Flight_Mode_Set(u8 dT_ms)
 		if(CH_N[AUX2]<-300)//<1200
 		{
 			flag.flight_mode2 = 0;
+			Program_Ctrl_User_Set_YAWdps(0);
+
 		}
 		else if(CH_N[AUX2]<200)//1200-1700
 		{
 			flag.flight_mode2 = 1;
+			Program_Ctrl_User_Set_YAWdps(5);
 		}
 		else//>=1700
 		{
 			flag.flight_mode2 = 2;
+			Program_Ctrl_User_Set_YAWdps(-5);
+
 		}
 		
 		if (CH_N[AUX3]<0)

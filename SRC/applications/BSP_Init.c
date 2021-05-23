@@ -57,7 +57,7 @@ u8 All_Init()
 	Usb_Hid_Init();					//飞控usb接口的hid初始化
 	Delay_ms(100);					//延时
 	
-	Usart2_Init(500000);			//串口2初始化，函数参数为波特率
+	Usart2_Init(9600);			//串口2初始化，函数参数为波特率
 	Delay_ms(10);					//延时	
 //	Uart4_Init(115200);				//首先判断是否连接的是激光模块
 //	if(!Drv_Laser_Init())			//激光没有有效连接，则配置为光流模式

@@ -101,6 +101,7 @@ void Usart2_IRQ ( void )
         USART_ClearITPendingBit ( USART2, USART_IT_RXNE ); //清除中断标志
 
         com_data = USART2->DR;
+		 flag.sonic = com_data;
         //AnoDTRxOneByteUart ( com_data );
     }
     //发送（进入移位）中断

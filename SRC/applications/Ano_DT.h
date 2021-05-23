@@ -38,7 +38,7 @@ typedef enum
 	CSID_X34,
 	CSID_X40,
 	CSID_X41,
-	CSID_XFA,
+	CSID_XF1,
 	CSID_NUM
 } _enu_cyclesendid;
 
