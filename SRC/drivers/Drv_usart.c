@@ -12,7 +12,7 @@
 #include "Drv_laser.h"
 #include "include.h"
 #include "Drv_UP_Flow.h"
-
+#include "Drv_ultrasonic.h"
 //====uart2
 void Usart2_Init ( u32 br_num )
 {
@@ -101,8 +101,9 @@ void Usart2_IRQ ( void )
         USART_ClearITPendingBit ( USART2, USART_IT_RXNE ); //清除中断标志
 
         com_data = USART2->DR;
-		 flag.sonic = com_data;
+				UltraSonic_Byte_Get(com_data);
         //AnoDTRxOneByteUart ( com_data );
+				
     }
     //发送（进入移位）中断
     if ( USART_GetITStatus ( USART2, USART_IT_TXE ) )

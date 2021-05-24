@@ -2,7 +2,7 @@
 .\build\drv_time.o: SRC\drivers\Drv_time.h
 .\build\drv_time.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\drv_time.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\drv_time.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\drv_time.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\drv_time.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\drv_time.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\drv_time.o: .\Libraries\CMSIS\Include\core_cm4_simd.h

@@ -1,7 +1,7 @@
 .\build\usbd_stm32f4xx_fs.o: SRC\drivers\usbd_STM32F4xx_FS.c
 .\build\usbd_stm32f4xx_fs.o: .\Libraries\USBStack\INC\RTL.h
 .\build\usbd_stm32f4xx_fs.o: .\Libraries\USBStack\INC\rl_usb.h
-.\build\usbd_stm32f4xx_fs.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\usbd_stm32f4xx_fs.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\usbd_stm32f4xx_fs.o: .\Libraries\USBStack\INC\usb.h
 .\build\usbd_stm32f4xx_fs.o: .\Libraries\USBStack\INC\usb_def.h
 .\build\usbd_stm32f4xx_fs.o: .\Libraries\USBStack\INC\usb_cdc.h

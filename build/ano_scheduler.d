@@ -2,7 +2,7 @@
 .\build\ano_scheduler.o: SRC\applications\Ano_Scheduler.h
 .\build\ano_scheduler.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\ano_scheduler.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\ano_scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\ano_scheduler.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\ano_scheduler.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\ano_scheduler.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\ano_scheduler.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -66,4 +66,5 @@
 .\build\ano_scheduler.o: SRC\applications\Ano_OPMV_Ctrl.h
 .\build\ano_scheduler.o: SRC\applications\Ano_OF_DecoFusion.h
 .\build\ano_scheduler.o: .\SRC\AnoImu\Ano_Imu_Task.h
-.\build\ano_scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\build\ano_scheduler.o: D:\mdk5\ARM\ARMCC\Bin\..\include\math.h
+.\build\ano_scheduler.o: SRC\applications\Ano_ProgramCtrl_User.h

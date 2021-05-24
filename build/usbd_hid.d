@@ -1,7 +1,7 @@
 .\build\usbd_hid.o: Libraries\USBStack\SRC\usbd_hid.c
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\RTL.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\rl_usb.h
-.\build\usbd_hid.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\usbd_hid.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usb.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usb_def.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usb_cdc.h
@@ -17,7 +17,7 @@
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usbd_hid.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usbd_msc.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usbd_hw.h
-.\build\usbd_hid.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\build\usbd_hid.o: D:\mdk5\ARM\ARMCC\Bin\..\include\string.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usb_for_lib.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usbd_lib_cdc.h
 .\build\usbd_hid.o: .\Libraries\USBStack\INC\usbd_lib_hid.h

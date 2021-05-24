@@ -175,9 +175,10 @@ typedef struct
 	u8 motor_preparation;
 	u8 locked_rotor;
 	
-	s16 pos_x_pidp;
-	s16 sonic;
-	
+	s16 pos_x_pidp;	
+	//³¬Éù²¨Êý¾Ý
+	u8 offline;
+	u16 distance;
 }_flag;
 extern _flag flag;
 

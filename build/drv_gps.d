@@ -2,7 +2,7 @@
 .\build\drv_gps.o: SRC\drivers\drv_spl06.h
 .\build\drv_gps.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\drv_gps.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\drv_gps.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\drv_gps.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\drv_gps.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\drv_gps.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\drv_gps.o: .\Libraries\CMSIS\Include\core_cm4_simd.h

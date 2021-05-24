@@ -39,7 +39,7 @@
 #include "Drv_BSP.h"
 #include "math.h"
 #include "Ano_FcData.h"
-
+#include "Ano_ProgramCtrl_User.h"
 u32 test_dT_1000hz[3],test_rT[6];
 
 static void Loop_1000Hz(void)	//1ms执行一次

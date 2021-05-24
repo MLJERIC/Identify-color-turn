@@ -2,7 +2,7 @@
 .\build\drv_usart.o: SRC\drivers\Drv_usart.h
 .\build\drv_usart.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\drv_usart.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\drv_usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\drv_usart.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\drv_usart.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\drv_usart.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\drv_usart.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -40,7 +40,9 @@
 .\build\drv_usart.o: SRC\drivers\Drv_OpenMV.h
 .\build\drv_usart.o: SRC\drivers\Drv_laser.h
 .\build\drv_usart.o: SRC\drivers\Drv_UP_Flow.h
-.\build\drv_usart.o: .\SRC\applications\Ano_UWB.h
+.\build\drv_usart.o: SRC\drivers\Drv_ultrasonic.h
+.\build\drv_usart.o: .\SRC\fc_specific\Ano_FlightCtrl.h
 .\build\drv_usart.o: .\SRC\fc_general\Ano_Filter.h
 .\build\drv_usart.o: .\SRC\fc_general\Ano_Math.h
+.\build\drv_usart.o: .\SRC\applications\Ano_UWB.h
 .\build\drv_usart.o: .\SRC\fc_general\Ano_Imu.h

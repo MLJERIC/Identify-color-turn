@@ -1,7 +1,7 @@
 .\build\ano_usb.o: SRC\applications\Ano_USB.c
 .\build\ano_usb.o: .\Libraries\USBStack\INC\RTL.h
 .\build\ano_usb.o: .\Libraries\USBStack\INC\rl_usb.h
-.\build\ano_usb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\ano_usb.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\ano_usb.o: .\Libraries\USBStack\INC\usb.h
 .\build\ano_usb.o: .\Libraries\USBStack\INC\usb_def.h
 .\build\ano_usb.o: .\Libraries\USBStack\INC\usb_cdc.h
