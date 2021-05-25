@@ -184,6 +184,8 @@ void ANO_DT_Init(void)
 	dt.txSet_u2[CSID_X30].fre_ms = 200;//
 	//遥控数据
 	dt.txSet_u2[CSID_X40].fre_ms = 100;//
+	//颜色识别转头
+	dt.txSet_u2[CSID_XF1].fre_ms = 50;//
 //	//实时控制数据
 //	dt.txSet_u2[CSID_X41].fre_ms = 50;//
 //	//FC_RGB

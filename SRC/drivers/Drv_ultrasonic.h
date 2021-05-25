@@ -9,3 +9,4 @@ typedef struct
 }_UltraSonic_data_st;
 //Êı¾İÉùÃ÷
 extern _UltraSonic_data_st uls;
+void ct_state_task();

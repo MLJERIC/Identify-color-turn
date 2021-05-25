@@ -29,3 +29,5 @@
 .\build\drv_ultrasonic_1.o: .\SRC\fc_specific\config.h
 .\build\drv_ultrasonic_1.o: .\SRC\fc_general\Ano_Filter.h
 .\build\drv_ultrasonic_1.o: .\SRC\fc_general\Ano_Math.h
+.\build\drv_ultrasonic_1.o: SRC\drivers\Drv_OpenMV.h
+.\build\drv_ultrasonic_1.o: .\SRC\applications\Ano_ProgramCtrl_User.h

@@ -68,3 +68,4 @@
 .\build\ano_scheduler.o: .\SRC\AnoImu\Ano_Imu_Task.h
 .\build\ano_scheduler.o: D:\mdk5\ARM\ARMCC\Bin\..\include\math.h
 .\build\ano_scheduler.o: SRC\applications\Ano_ProgramCtrl_User.h
+.\build\ano_scheduler.o: .\SRC\drivers\Drv_ultrasonic.h
