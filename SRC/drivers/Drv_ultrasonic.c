@@ -93,10 +93,10 @@ void ct_state_task()
 	{
 		if(opmv.offline==0)//视野中是否出现啊红色杆子
 		{
-			Program_Ctrl_User_Set_YAWdps(-2*opmv.cb.pos_x);//根据识别
-			if(ABS(opmv.cb.pos_x)<10)//如果在视野中央范围内
+			Program_Ctrl_User_Set_YAWdps(-2*opmv.cb.pos_x);//根据识别，控制杆子在视野中央
+			if(ABS(opmv.cb.pos_x)<20)//如果在视野中央范围内
 			{
-				if(flag.offline==0)state++;		//如果同时超声波识别到，进入下一个阶段
+				state++;		//进入下一个阶段
 			}		
 		}
 		else
@@ -106,6 +106,8 @@ void ct_state_task()
 	}
 	else if(state ==1)//进入阶段2，距离控制
 	{
+		if(flag.offline)
+		{
 		if(flag.distance>350||flag.distance<250)//不在可转动范围内时
 		{
 			pc_user.vel_cmps_set_h[0] = 0.1*(flag.distance-350);		//控制距离
@@ -114,12 +116,13 @@ void ct_state_task()
 		{
 			state++;//当在可转动范围时，进入下一个阶段
 		}
-		if(flag.offline||opmv.offline)//如果此时突然opmv掉线或超声波掉线，回到状态1
+		}
+		if(opmv.offline)//如果此时突然opmv掉线或超声波掉线，回到状态1
 		{
 			state =0;		
 		}		
 	}
-	else if(state ==3)
+	else if(state ==2)
 	{
 		
 			pc_user.vel_cmps_set_h[1]=10;//传感器都正常工作时进入阶段3，横向移动

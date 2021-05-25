@@ -549,7 +549,7 @@ void Flight_Mode_Set(u8 dT_ms)
 	////
 	if(CH_N[AUX1]<-300)
 	{
-		flag.flight_mode = ATT_STAB;
+		flag.flight_mode = LOC_HOLD;
 	}
 	else if(CH_N[AUX1]<200)
 	{
@@ -557,7 +557,7 @@ void Flight_Mode_Set(u8 dT_ms)
 	}
 	else
 	{
-		flag.flight_mode = RETURN_HOME;
+		flag.flight_mode = LOC_HOLD;
 	}
 	
 	
@@ -583,12 +583,10 @@ void Flight_Mode_Set(u8 dT_ms)
 		else if(CH_N[AUX2]<200)//1200-1700
 		{
 			flag.flight_mode2 = 1;
-			Program_Ctrl_User_Set_YAWdps(5);
 		}
 		else//>=1700
 		{
 			flag.flight_mode2 = 2;
-			Program_Ctrl_User_Set_YAWdps(-5);
 
 		}
 		

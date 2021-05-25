@@ -428,6 +428,9 @@ static void DTFrameAddData(u8 frame_num,u8 *_cnt)
 			temp_data = (s16)(flag.pos_x_pidp);
 			CycleSendData[(*_cnt)++] = BYTE0(temp_data);
 			CycleSendData[(*_cnt)++] = BYTE1(temp_data);
+			temp_data = (u16)(flag.distance);
+			CycleSendData[(*_cnt)++] = BYTE0(temp_data);
+			CycleSendData[(*_cnt)++] = BYTE1(temp_data);			
 		}
 		break;	
 		default :break;
