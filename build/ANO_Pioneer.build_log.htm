@@ -27,33 +27,8 @@ Project File Date:  05/24/2021
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 3 (build 300)', folder: 'D:\mdk5\ARM\ARMCC\Bin'
 Build target 'Ano_Pioneer'
-compiling Drv_ultrasonic.c...
-SRC\drivers\Drv_ultrasonic.h(15): warning:  #1-D: last line of file ends without a newline
-  void ct_state_task3(void);
-SRC\drivers\Drv_ultrasonic.c(91): warning:  #177-D: variable "state_loss" was declared but never referenced
-  	static u8 state_loss=0;
-SRC\drivers\Drv_ultrasonic.c: 2 warnings, 0 errors
-compiling Drv_usart.c...
-SRC\drivers\Drv_ultrasonic.h(15): warning:  #1-D: last line of file ends without a newline
-  void ct_state_task3(void);
-SRC\drivers\Drv_usart.c(234): warning:  #177-D: function "Usart3_Send" was declared but never referenced
-  static void Usart3_Send ( unsigned char *DataToSend , u8 data_num )
-SRC\drivers\Drv_usart.c: 2 warnings, 0 errors
-compiling Ano_Scheduler.c...
-.\SRC\drivers\Drv_ultrasonic.h(15): warning:  #1-D: last line of file ends without a newline
-  void ct_state_task3(void);
-SRC\applications\Ano_Scheduler.c: 1 warning, 0 errors
-compiling Ano_DT.c...
-.\SRC\drivers\Drv_ultrasonic.h(15): warning:  #1-D: last line of file ends without a newline
-  void ct_state_task3(void);
-SRC\applications\Ano_DT.c(659): warning:  #177-D: function "WritePar" was declared but never referenced
-  static void WritePar(u16 p_id, s32 p_val)
-SRC\applications\Ano_DT.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=106488 RO-data=2316 RW-data=1248 ZI-data=13832  
-FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o ./AnoPioneerPro.bin ./build/Ano_Pioneer.axf
-".\build\ANO_Pioneer.axf" - 0 Error(s), 7 Warning(s).
+".\build\ANO_Pioneer.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\old\p2\Identify-color-turn\RTE
