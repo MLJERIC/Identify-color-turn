@@ -142,6 +142,7 @@ u8 ct_state_task1()//yaw轴控制
 		if(ABS(opmv.cb.pos_x)>10)//杆子不在视野中央
 		{
 			Program_Ctrl_User_Set_YAWdps(-1*opmv.cb.pos_x);
+			
 			return 1;
 		}
 		else
@@ -160,7 +161,7 @@ u8 ct_state_task1()//yaw轴控制
 
 void ct_state_task2()//前后移动控制
 {
-	if(ct_state_task1()==1)//视野正常且在正中央
+	if(ct_state_task1()==2)//视野正常且在正中央
 	{		
 		if(flag.offline==0)//超声波有识别
 		{
@@ -175,9 +176,9 @@ void ct_state_task2()//前后移动控制
 
 void ct_state_task3()
 {
-	if(ct_state_task1()==1)
+	if(ct_state_task1()==2)
 	{
-		pc_user.vel_cmps_set_h[1]= 0.1*(90-opmv.cb.pos_x);     //横向移动
+		pc_user.vel_cmps_set_h[1]=-5;     //横向移动
 	}
 	else
 	{

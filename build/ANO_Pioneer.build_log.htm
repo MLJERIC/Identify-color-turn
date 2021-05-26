@@ -22,13 +22,26 @@ Dialog DLL:      TCM.DLL V1.14.14.0
  
 <h2>Project:</h2>
 D:\old\p2\Identify-color-turn\ANO_Pioneer.uvprojx
-Project File Date:  05/24/2021
+Project File Date:  05/26/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 3 (build 300)', folder: 'D:\mdk5\ARM\ARMCC\Bin'
 Build target 'Ano_Pioneer'
+compiling Drv_ultrasonic.c...
+SRC\drivers\Drv_ultrasonic.h(15): warning:  #1-D: last line of file ends without a newline
+  void ct_state_task3(void);
+SRC\drivers\Drv_ultrasonic.c(91): warning:  #177-D: variable "state_loss" was declared but never referenced
+  	static u8 state_loss=0;
+SRC\drivers\Drv_ultrasonic.c: 2 warnings, 0 errors
+compiling Ano_Scheduler.c...
+.\SRC\drivers\Drv_ultrasonic.h(15): warning:  #1-D: last line of file ends without a newline
+  void ct_state_task3(void);
+SRC\applications\Ano_Scheduler.c: 1 warning, 0 errors
+linking...
+Program Size: Code=103728 RO-data=2316 RW-data=1200 ZI-data=13832  
+FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o ./AnoPioneerPro.bin ./build/Ano_Pioneer.axf
-".\build\ANO_Pioneer.axf" - 0 Error(s), 0 Warning(s).
+".\build\ANO_Pioneer.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\old\p2\Identify-color-turn\RTE
