@@ -4,6 +4,7 @@
 #include "ANO_FcData.h"
 #include "Drv_OpenMV.h"
 #include "Ano_ProgramCtrl_User.h"
+#include "Ano_Math.h"
 //ioesr05超声波数据接收函数
 u8 UltraSonic_buf[10]; 
 
@@ -190,7 +191,7 @@ s16 opmv_pox_pid(s16 ep_pox,s16 opmv_pox){//横向移动pid
 	pox_pid_p=(ep_pox-opmv_pox);
 	pox_pid_i=ep_pox-((ep_pox-pox_pid_p)+opmv_pox);
 	pox_pid_d=(ep_pox-pox_pid_p)-(ep_pox_old-opmv_pox_old);
-
+	pox_pid_i=LIMIT( pox_pid_i,0,10);//i限制
 	ep_pox_old=ep_pox;
 	opmv_pox_old=opmv_pox;
 	pox_pid=pox_pid_p+pox_pid_i+pox_pid_d;
