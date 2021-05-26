@@ -155,12 +155,12 @@ static void Loop_50Hz(void)	//20ms执行一次
 	Loc_1level_Ctrl(20,CH_N);
 	/*OPMV检测是否掉线*/
 	OpenMV_Offline_Check(20);
-	/*OPMV色块追踪数据处理任务*/
-	ANO_CBTracking_Task(20);
-	/*OPMV寻线数据处理任务*/
-	ANO_LTracking_Task(20);
-	/*OPMV控制任务*/
-	ANO_OPMV_Ctrl_Task(20);
+//	/*OPMV色块追踪数据处理任务*/
+//	ANO_CBTracking_Task(20);
+//	/*OPMV寻线数据处理任务*/
+//	ANO_LTracking_Task(20);
+//	/*OPMV控制任务*/
+//	ANO_OPMV_Ctrl_Task(20);
 }
 
 static void Loop_20Hz(void)	//50ms执行一次

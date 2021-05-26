@@ -141,7 +141,7 @@ u8 ct_state_task1()//yaw轴控制
 	{	
 		if(ABS(opmv.cb.pos_x)>20)//杆子不在视野中央
 		{
-			Program_Ctrl_User_Set_YAWdps(-4*opmv.cb.pos_x);
+			Program_Ctrl_User_Set_YAWdps(-1*opmv.cb.pos_x);
 			return 1;
 		}
 		else
