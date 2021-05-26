@@ -177,12 +177,24 @@ void ct_state_task3()
 {
 	if(ct_state_task1()==1)
 	{
-		pc_user.vel_cmps_set_h[1]= 0.1*(90-opmv.cb.pos_x);
+		pc_user.vel_cmps_set_h[1]= 0.1*(90-opmv.cb.pos_x);     //横向移动
 	}
 	else
 	{
 		pc_user.vel_cmps_set_h[1]=0;
 	}
+}
+s16 opmv_pox_pid(s16 ep_pox,s16 opmv_pox){//横向移动pid
+
+	s16 pox_pid,pox_pid_p,pox_pid_i,pox_pid_d,ep_pox_old=0,opmv_pox_old=0;
+	pox_pid_p=(ep_pox-opmv_pox);
+	pox_pid_i=ep_pox-((ep_pox-pox_pid_p)+opmv_pox);
+	pox_pid_d=(ep_pox-pox_pid_p)-(ep_pox_old-opmv_pox_old);
+
+	ep_pox_old=ep_pox;
+	opmv_pox_old=opmv_pox;
+	pox_pid=pox_pid_p+pox_pid_i+pox_pid_d;
+	return pox_pid;
 }
 
 
