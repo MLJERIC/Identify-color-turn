@@ -196,12 +196,8 @@ static void Loop_20Hz(void)	//50ms执行一次
 //    }		
 //	else 		Program_Ctrl_User_Set_YAWdps(0);
 //	
-if(flag.flight_mode2==1)ct_state_task1();
-else if (flag.flight_mode2==2)
-{
-	ct_state_task2();
-}
-
+if(flag.flight_mode2==2)
+			ct_state_task();
 }
 
 static void Loop_2Hz(void)	//500ms执行一次

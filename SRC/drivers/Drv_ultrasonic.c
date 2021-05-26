@@ -93,7 +93,7 @@ void ct_state_task()
 	{
 		if(opmv.offline==0)//视野中是否出现啊红色杆子
 		{
-			Program_Ctrl_User_Set_YAWdps(-2*opmv.cb.pos_x);//根据识别，控制杆子在视野中央
+			Program_Ctrl_User_Set_YAWdps(-4*opmv.cb.pos_x);//根据识别，控制杆子在视野中央
 			if(ABS(opmv.cb.pos_x)<20)//如果在视野中央范围内
 			{
 				state++;		//进入下一个阶段
@@ -135,7 +135,54 @@ void ct_state_task()
 
 }
 
+u8 ct_state_task1()//yaw轴控制
+{
+	if(opmv.offline==0)//杆子出现在视野中
+	{	
+		if(ABS(opmv.cb.pos_x)>20)//杆子不在视野中央
+		{
+			Program_Ctrl_User_Set_YAWdps(-4*opmv.cb.pos_x);
+			return 1;
+		}
+		else
+		{	
+			Program_Ctrl_User_Set_YAWdps(0);
+			return 2;
+		}
+	}
+	else
+	{
+		Program_Ctrl_User_Set_YAWdps(10);//丢失视野的时候原地自旋
+		Program_Ctrl_User_Set_HXYcmps(0,0);
+		return 0;
+	}
+}
 
+void ct_state_task2()//前后移动控制
+{
+	if(ct_state_task1()==1)//视野正常且在正中央
+	{		
+		if(flag.offline==0)//超声波有识别
+		{
+			pc_user.vel_cmps_set_h[0] = 0.1*(flag.distance-350);		//控制距离
+		}
+		else
+		{
+			pc_user.vel_cmps_set_h[0] = 0;
+		}
+	}
+}
 
+void ct_state_task3()
+{
+	if(ct_state_task1()==1)
+	{
+		pc_user.vel_cmps_set_h[1]= 0.1*(90-opmv.cb.pos_x);
+	}
+	else
+	{
+		pc_user.vel_cmps_set_h[1]=0;
+	}
+}
 
 
