@@ -174,6 +174,7 @@ if(flag.flight_mode2==1)ct_state_task1();
 else if (flag.flight_mode2==2)
 {
 	ct_state_task2();
+	ct_state_task3();
 }
 
 }

@@ -110,7 +110,7 @@ void ct_state_task()
 		{
 		if(flag.distance>350||flag.distance<250)//不在可转动范围内时
 		{
-			pc_user.vel_cmps_set_h[0] = 0.1*(flag.distance-50);		//控制距离
+			pc_user.vel_cmps_set_h[0] = 0.1*(flag.distance-350);		//控制距离
 		}
 		else 
 		{
@@ -139,7 +139,7 @@ u8 ct_state_task1()//yaw轴控制
 {
 	if(opmv.offline==0)//杆子出现在视野中
 	{	
-		if(ABS(opmv.cb.pos_x)>10)//杆子不在视野中央
+		if(ABS(opmv.cb.pos_x)>20)//杆子不在视野中央
 		{
 			Program_Ctrl_User_Set_YAWdps(-1*opmv.cb.pos_x);
 			return 1;
@@ -164,7 +164,7 @@ void ct_state_task2()//前后移动控制
 	{		
 		if(flag.offline==0)//超声波有识别
 		{
-			pc_user.vel_cmps_set_h[0] = 0.1*(flag.distance-550);		//控制距离
+			pc_user.vel_cmps_set_h[0] = 0.1*(flag.distance-350);		//控制距离
 		}
 		else
 		{
