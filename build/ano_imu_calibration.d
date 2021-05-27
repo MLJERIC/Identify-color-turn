@@ -5,7 +5,7 @@
 .\build\ano_imu_calibration.o: .\SRC\fc_specific\config.h
 .\build\ano_imu_calibration.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\ano_imu_calibration.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\ano_imu_calibration.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\ano_imu_calibration.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\ano_imu_calibration.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\ano_imu_calibration.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\ano_imu_calibration.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -39,4 +39,4 @@
 .\build\ano_imu_calibration.o: .\SRC\drivers\Drv_BSP.h
 .\build\ano_imu_calibration.o: .\SRC\fc_general\Ano_Filter.h
 .\build\ano_imu_calibration.o: .\SRC\fc_general\Ano_Math.h
-.\build\ano_imu_calibration.o: D:\mdk5\ARM\ARMCC\Bin\..\include\string.h
+.\build\ano_imu_calibration.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

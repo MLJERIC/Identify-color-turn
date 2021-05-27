@@ -2,7 +2,7 @@
 .\build\usb_config.o: .\Libraries\USBStack\INC\usb_lib.c
 .\build\usb_config.o: .\Libraries\USBStack\INC\RTL.h
 .\build\usb_config.o: .\Libraries\USBStack\INC\rl_usb.h
-.\build\usb_config.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\usb_config.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\usb_config.o: .\Libraries\USBStack\INC\usb.h
 .\build\usb_config.o: .\Libraries\USBStack\INC\usb_def.h
 .\build\usb_config.o: .\Libraries\USBStack\INC\usb_cdc.h

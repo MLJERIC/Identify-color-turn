@@ -155,12 +155,13 @@ static void Loop_50Hz(void)	//20ms执行一次
 	Loc_1level_Ctrl(20,CH_N);
 	/*OPMV检测是否掉线*/
 	OpenMV_Offline_Check(20);
-	/*OPMV色块追踪数据处理任务*/
-	ANO_CBTracking_Task(20);
-	/*OPMV寻线数据处理任务*/
-	ANO_LTracking_Task(20);
-	/*OPMV控制任务*/
-	ANO_OPMV_Ctrl_Task(20);
+//	/*OPMV色块追踪数据处理任务*/
+//	ANO_CBTracking_Task(20);
+//	/*OPMV寻线数据处理任务*/
+//	ANO_LTracking_Task(20);
+//	/*OPMV控制任务*/
+//	ANO_OPMV_Ctrl_Task(20);
+
 }
 
 static void Loop_20Hz(void)	//50ms执行一次
@@ -169,39 +170,15 @@ static void Loop_20Hz(void)	//50ms执行一次
 	Power_UpdateTask(50);
 	//恒温控制
 	Thermostatic_Ctrl_Task(50);
-	//openmv寻物转头
-//    if(opmv.offline==0)//当物体出现在视野内
-//	{	
-//		s16 pox_x_opmv;		
-//		pox_x_opmv=(opmv.cb.pos_x/(160*120))*25.4*0.1f;
-//	if(opmv.cb.pos_x>=0){
-//		//设与物体距离为20cm（可识别最远距离），x单位像素转厘米
-//		flag.pos_x_pidp=-((asin(opmv.cb.pos_x/20))*10);		
-//		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);	//速度暂定10度每秒
-//	}
-//	else if(opmv.cb.pos_x<0){
-//		flag.pos_x_pidp=(asin((-opmv.cb.pos_x)/20))*10;
-//		Program_Ctrl_User_Set_YAWdps(flag.pos_x_pidp);
-//	}
-//		Program_Ctrl_User_Set_YAWdps(-2*opmv.cb.pos_x);//根据距离视野中心的偏差量转动对应角度
-//		if(opmv.cb.pos_x<10&&opmv.cb.pos_x>-10)//近似认为物体在视野中央
-//			{
-//				if(flag.offline==0)//如果此时超声波识别到了，基本确定物体在正前方
-//				{
-//					if(flag.distance>350)	pc_user.vel_cmps_set_h[0] =flag.distance-350;
-//					else if(flag.distance<250)pc_user.vel_cmps_set_h[0] =flag.distance-350;								
-//				}
-//									
-//			}
-//    }		
-//	else 		Program_Ctrl_User_Set_YAWdps(0);
-//	
-if(flag.flight_mode2==1)ct_state_task1();
-else if (flag.flight_mode2==2)
-{
-	ct_state_task2();
-}
-
+	
+//if(flag.flight_mode2==1)ct_state_task1();
+//else if (flag.flight_mode2==2)
+//{
+//	ct_state_task2();
+//	ct_state_task3();
+//}
+	//超声波测试
+	ultras_tesk();
 }
 
 static void Loop_2Hz(void)	//500ms执行一次

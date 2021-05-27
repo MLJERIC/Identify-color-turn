@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp
+--cpu=Cortex-M4.fp
 ".\build\stm32f4xx_it.o"
 ".\build\ano_usb.o"
 ".\build\usb_config.o"
@@ -51,7 +51,7 @@
 ".\build\drv_bmi088.o"
 ".\build\drv_bsp.o"
 ".\build\drv_rcin.o"
-".\build\drv_ultrasonic_1.o"
+".\build\drv_ultrasonic.o"
 ".\build\misc.o"
 ".\build\stm32f4xx_adc.o"
 ".\build\stm32f4xx_dbgmcu.o"
@@ -75,6 +75,6 @@
 ".\build\ano_imu_data.o"
 ".\build\ano_imu_task.o"
 --library_type=microlib --strict --scatter ".\build\ANO_Pioneer.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\build\ANO_Pioneer.map" -o .\build\ANO_Pioneer.axf

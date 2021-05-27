@@ -2,7 +2,7 @@
 .\build\stm32f4xx_usart.o: .\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
 .\build\stm32f4xx_usart.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\stm32f4xx_usart.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\stm32f4xx_usart.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\stm32f4xx_usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\stm32f4xx_usart.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\stm32f4xx_usart.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\stm32f4xx_usart.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
