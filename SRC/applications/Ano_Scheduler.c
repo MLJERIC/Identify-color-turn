@@ -178,7 +178,7 @@ static void Loop_20Hz(void)	//50ms执行一次
 //	ct_state_task3();
 //}
 	//超声波测试
-	ultras_tesk();
+if(flag.flight_mode2==2)	ultras_tesk();
 }
 
 static void Loop_2Hz(void)	//500ms执行一次

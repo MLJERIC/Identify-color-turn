@@ -176,16 +176,17 @@ u8 ct_state_task1()//yaw轴控制
 
 void ultras_tesk()// 超声波测试
 {
-
-		if(flag.offline==0)//超声波有识别
 		{
-			pc_user.vel_cmps_set_h[0] = flag.distance-350;		//控制距离
-		}
-		else
-		{
-			pc_user.vel_cmps_set_h[0] = 0;
-		}
-
+			if(flag.offline==0)//超声波有识别
+			{
+				pc_user.vel_cmps_set_h[0] = -0.2*(ultra_pid(1000,flag.distance));		//控制距离
+				pc_user.vel_cmps_set_h[0]=LIMIT(pc_user.vel_cmps_set_h[0],-10,10);
+			}
+			else
+			{
+				pc_user.vel_cmps_set_h[0] = 0;
+			}
+	}
 }
 
 void ct_state_task3()
@@ -199,18 +200,43 @@ void ct_state_task3()
 		pc_user.vel_cmps_set_h[1]=0;
 	}
 }
+
 s16 opmv_pox_pid(s16 ep_pox,s16 opmv_pox)//横向移动pid
 {
 
 	s16 pox_pid,pox_pid_p,pox_pid_i,pox_pid_d,ep_pox_old=0,opmv_pox_old=0;
 	pox_pid_p=(ep_pox-opmv_pox);
-	pox_pid_i=ep_pox-((ep_pox-pox_pid_p)+opmv_pox);
+	pox_pid_i=ep_pox-(0.5*(ep_pox-pox_pid_p)+opmv_pox);
 	pox_pid_d=(ep_pox-pox_pid_p)-(ep_pox_old-opmv_pox_old);
-	pox_pid_i=LIMIT( pox_pid_i,0,10);//i限制
+	pox_pid_i=LIMIT( pox_pid_i,0,5);//i限制
 	ep_pox_old=ep_pox;
 	opmv_pox_old=opmv_pox;
 	pox_pid=pox_pid_p+pox_pid_i+pox_pid_d;
 	return pox_pid;
 }
 
+u16 ultra_pid(u16 ep_distance,u16 distance)//超声波pid
+{
+
+	u16 pox_pid,pox_pid_p=0,pox_pid_i=0,pox_pid_d=0;
+static	u16 ep_pox_old=0,opmv_pox_old=0;
+	if((ep_distance-distance)>=0)
+	{
+		pox_pid_p=(ep_distance-distance);
+		pox_pid_i=ep_distance-(0.5*(ep_distance-pox_pid_p)+distance);
+		pox_pid_d=(ep_distance-pox_pid_p)-(ep_pox_old-opmv_pox_old);
+		pox_pid_i=LIMIT( pox_pid_i,0,5);//i限制
+	}
+	else 
+	{
+		pox_pid_p=(ep_distance-distance);
+		pox_pid_i=ep_distance-(-(0.5*(ep_distance-pox_pid_p))+distance);
+		pox_pid_d=(ep_distance-pox_pid_p)-(ep_pox_old-opmv_pox_old);
+		if((-pox_pid_i)>5) pox_pid_i=-5;//i限制
+	}	
+	ep_pox_old=ep_distance;
+	opmv_pox_old=distance;
+	pox_pid=pox_pid_p-pox_pid_i+pox_pid_d;
+	return pox_pid;
+}
 

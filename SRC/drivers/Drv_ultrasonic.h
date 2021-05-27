@@ -15,3 +15,4 @@ u8 ct_state_task1(void);
 void ct_state_task2(void);
 void ct_state_task3(void);
 void ultras_tesk(void);
+u16 ultra_pid(u16 ep_distance,u16 distance);

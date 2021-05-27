@@ -30,14 +30,16 @@ Build target 'Ano_Pioneer'
 compiling Drv_ultrasonic.c...
 SRC\drivers\Drv_ultrasonic.h(5): warning:  #1295-D: Deprecated declaration ultras_tesk - give arg types
   void ultras_tesk();
-SRC\drivers\Drv_ultrasonic.h(17): warning:  #1-D: last line of file ends without a newline
-  void ultras_tesk(void);
-SRC\drivers\Drv_ultrasonic.c: 2 warnings, 0 errors
+SRC\drivers\Drv_ultrasonic.h(18): warning:  #1-D: last line of file ends without a newline
+  u16 ultra_pid(u16 ep_distance,u16 distance);
+SRC\drivers\Drv_ultrasonic.c(234): warning:  #68-D: integer conversion resulted in a change of sign
+  		if((-pox_pid_i)>5) pox_pid_i=-5;//iœﬁ÷∆
+SRC\drivers\Drv_ultrasonic.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=103432 RO-data=2316 RW-data=1196 ZI-data=13836  
+Program Size: Code=103968 RO-data=2316 RW-data=1196 ZI-data=13836  
 FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o ./AnoPioneerPro.bin ./build/Ano_Pioneer.axf
-".\build\ANO_Pioneer.axf" - 0 Error(s), 2 Warning(s).
+".\build\ANO_Pioneer.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -51,7 +53,7 @@ Package Vendor: Keil
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
